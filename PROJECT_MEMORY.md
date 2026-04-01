@@ -128,6 +128,7 @@ Still missing:
 - 2026-04-01: user requested batching everywhere: all heavy computations should run chunked/batched, not only the worst offender.
 - 2026-04-01: user explicitly requested finishing the batching work everywhere, including plume rendering/products.
 - 2026-04-01: user suspected wind animation is “just looped”; asked for short explanation and fix for `Mean of empty slice` on wind particle means.
+- 2026-04-01: user requested GitHub publication prep: bilingual playful README (EN/RU), MIT `LICENSE`, `.gitignore` for `*.pyproj`, initial git commit; remote push requires user-created empty GitHub repo + `git remote add` + `git push`.
 
 ## Next Useful Upgrades
 
