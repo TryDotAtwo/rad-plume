@@ -130,6 +130,7 @@ Still missing:
 - 2026-04-01: user suspected wind animation is “just looped”; asked for short explanation and fix for `Mean of empty slice` on wind particle means.
 - 2026-04-01: user requested GitHub publication prep: bilingual playful README (EN/RU), MIT `LICENSE`, `.gitignore` for `*.pyproj`, initial git commit; remote push requires user-created empty GitHub repo + `git remote add` + `git push`.
 - 2026-04-01: user asked to install GitHub CLI and push. `winget install GitHub.cli` applied; `gh repo create` requires `gh auth login` (browser device flow) or `GH_TOKEN`; added `scripts/push_to_github.ps1` and README publishing section.
+- 2026-04-01: `gh auth login` completed (account TryDotAtwo); repo https://github.com/TryDotAtwo/rad-plume created and `main` pushed; fixed `push_to_github.ps1` origin check for PowerShell when `origin` absent.
 
 ## Next Useful Upgrades
 
