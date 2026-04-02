@@ -1,35 +1,106 @@
-# Rad Plume — radioactive cloud & fallout toy model
+# **RadPlumeGPT**
 
-<!-- Suggested GitHub repository description (copy-paste into repo settings):
-EN: Because the world is tense: a playful pipeline to estimate radioactive plume spread and ground deposition after a nuclear-site accident — not your civil emergency service, but better than a news ticker.
-RU: В связи с напряжённостью в мире — с оговорками и юмором: код для оценки облака и осадков при гипотетической аварии на ЯО; не для МЧС, но лучше, чем гадать по ТВ.
--->
+### *Radioactive Plume Generative Dispersion Model*
 
-## English
-
-**The world is… not boring.** In that spirit, here is code to **play through** how a radioactive plume might drift and what could end up on the ground (dry/wet-style deposition in a simplified sense) if something went wrong at a nuclear facility. It blends weather, runs a Lagrangian puff sketch, draws videos and maps, and writes a small data-quality report each run.
-
-**Disclaimer, but make it cheeky:** this is **not** a regulator-grade emergency tool, **not** HYSPLIT, and **not** a reason to skip the real authorities. It **is** a sandbox for engineers and the curious who want numbers and pictures instead of pure vibes.
+**Feed in a source → get consequences**
 
 ---
 
-## Русский
+## 🇬🇧 English
 
-**Мир сейчас не слишком расслабляющий.** На этой почве — **с шуткой и оговорками**: код, который оценивает, **как могло бы разойтись** радиоактивное облако и **что из этого могло бы оказаться на поверхности** (в упрощённой постановке) в случае аварии на ядерном объекте. Подтягивает метео, гоняет лагранжевы «пуфы», рисует ролики и карты, пишет отчёт о данных.
+**The world is… not boring.**
+So instead of doomscrolling — simulate it.
 
-**Оговорка по-честному:** это **не** государственная модель, **не** замена ГСЧС/МЧС и **не** повод игнорировать официальные предупреждения. Это **инженерная игрушка** для тех, кому нужны картинки и порядок величин, а не только бегущая строка на экране.
+This repo is a **slightly chaotic engineering sandbox** that answers a very simple question:
+
+> *“If something goes wrong… where does it go?”*
+
+It pulls real meteorology, runs a **Lagrangian Gaussian puff model**, and turns that into:
+
+* maps
+* animations
+* and outputs that look suspiciously like something from a report
 
 ---
 
-## What it does (for real)
+### ⚠️ Disclaimer (but stylish)
 
-- Download / blend meteorology (ERA5, ECMWF medium-range, seasonal tail).
-- Run a **Lagrangian Gaussian puff** transport model with layered release, steering-level wind, dry deposition, simple stability.
-- Render **wind** and **plume** animations, **summary** and **hazard** maps (plus dose-style outputs when configured).
-- Every run writes a timestamped folder under `outputs/`.
+This is **not** HYSPLIT.
+This is **not** an emergency-response tool.
+This is **not** something you should use instead of actual authorities.
 
-Default demo scenario is framed near **Dimona** (30 MW class point source) — **change coordinates** in config; the pipeline is not tied to one place.
+This **is**:
 
+* a physics-flavored “what if” engine
+* a weather-driven uncertainty machine
+* a way to replace vibes with plots
+
+---
+
+## 🇷🇺 Русский
+
+**Мир сейчас не слишком расслабляющий.**
+Поэтому вместо паники — моделируем.
+
+Этот репозиторий — **слегка хаотичная инженерная песочница**, которая отвечает на вопрос:
+
+> *«Если что-то пойдёт не так… куда это всё полетит?»*
+
+Он подтягивает реальные метеоданные, гоняет **лагранжеву модель гауссовых пуфов** и превращает это в:
+
+* карты
+* анимации
+* и результаты, подозрительно похожие на что-то из отчёта
+
+---
+
+### ⚠️ Оговорка (но красиво)
+
+Это **не** HYSPLIT.
+Это **не** инструмент реагирования.
+Это **не** замена официальным источникам.
+
+Это:
+
+* физика с элементами «а что если»
+* машина неопределённости на погоде
+* способ заменить тревожность на графики
+
+---
+
+## 🚀 What it does (actually)
+
+* Blends meteorology: **ERA5 + ECMWF + seasonal tail**
+* Runs **Lagrangian Gaussian puff transport**
+* Simulates:
+
+  * advection
+  * spread
+  * dry deposition
+  * simple stability
+* Produces:
+
+  * 🎞 plume animations
+  * 🌬 wind animations
+  * 🗺 contamination maps
+  * ⚠️ hazard-style outputs
+* Writes a **data-quality report** every run (because we pretend to be responsible)
+
+---
+
+## 🎯 Philosophy
+
+> Not accurate enough to trust.
+> Not dumb enough to ignore.
+
+---
+
+## 🧪 Demo scenario
+
+Default demo is near **Dimona** (≈30 MW class point source).
+Change coordinates — pipeline works anywhere.
+
+---
 ## Quick start
 
 ```powershell
