@@ -1,4 +1,4 @@
-# **RadPlumeGPT**
+# **RadPlumeGDT**
 
 ### *Radioactive Plume Generative Dispersion Model*
 
