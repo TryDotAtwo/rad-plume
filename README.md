@@ -126,6 +126,27 @@ Driving force behind everything.
 If this changes — everything changes.
 The plume is just along for the ride.
 
+☢️ Ground dose probability
+
+Where exposure actually accumulates.
+
+<img width="1680" height="1120" alt="scenario_hazard_ground_dose_danger_probability" src="https://github.com/user-attachments/assets/6ae918f3-6558-48f4-8bbc-7dd116d6cbfe" />
+
+Time-integrated impact on the ground.
+Not about peaks — about how long the plume stays.
+Slow wind → higher buildup.
+
+⚠️ Hazard probability
+
+All risk channels combined.
+
+<img width="1680" height="1120" alt="scenario_hazard_probability" src="https://github.com/user-attachments/assets/16120ed2-ab63-400b-a56a-32a453198f2e" />
+
+Union of thresholds: air + ground + time.
+Captures both short spikes and long exposure.
+This is the decision map.
+
+
 
 
 ---
